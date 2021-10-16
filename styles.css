@@ -1,0 +1,76 @@
+:root {
+  --main-color: #345995;
+  --secondary-color: #34938e;
+  --white: #ffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  background-color: var(--main-color);
+  display: grid;
+  place-content: center;
+}
+
+h1 {
+  text-align: center;
+  color: #ffff;
+  margin-bottom: 2rem;
+}
+
+input {
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 8px;
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+}
+
+.results {
+  text-align: center;
+  color: var(--white);
+  margin-top: 2rem;
+}
+
+.results .results-title {
+  margin-bottom: 1rem;
+}
+
+.results p {
+  margin-bottom: 0.5rem;
+}
