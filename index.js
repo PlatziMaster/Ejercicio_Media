@@ -1,4 +1,3 @@
-const listArray = [12, 6, 7, 3, 15, 10, 18, 5];
 const form = document.querySelector('#form');
 
 function average(listNumbers) {
