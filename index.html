@@ -19,22 +19,17 @@
   <body>
     <h1>Variance and Average</h1>
     <section class="card">
-      <form autocomplete="off">
+      <form autocomplete="off" id="form">
         <div>
           <label for=""> Write a list of numbers separated with commas: </label>
-          <input type="text" name="" id="input-values" />
+          <input type="text" id="input-values" />
         </div>
 
         <button>Calculate</button>
       </form>
     </section>
 
-    <section class="results">
-      <h2 class="results-title">Results</h2>
-      <p><strong>List of numbers: </strong>[12, 6, 7, 3, 15, 10, 18, 5]</p>
-      <p><strong>Average: </strong>9.5</p>
-      <p><strong>Population variance: </strong>27.142857142857142</p>
-    </section>
+    <section class="results d-none"></section>
 
     <script src="./index.js"></script>
   </body>
