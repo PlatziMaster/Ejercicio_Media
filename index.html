@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<style>
+    
+    body {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        background: radial-gradient(circle, rgba(189,238,174,1) 0%, rgba(193,218,181,1) 46%, rgba(148,233,189,1) 100%);
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        width: 500px;
+    }
+
+    input {
+        margin: 10px 0;
+    }
+
+
+</style>
+<body>
+    <div>
+        <h1>Calculo de la media</h1>
+        <label for="numbers">Ingresa los números para evaluar la media(separa los números por comas y sin espacios)</label> <br>
+        <input type="text" id="numbers" placeholder="3,4,5,7....etc"> 
+        <br>
+        <button>Calcular</button> 
+        <br>
+        <div id="result">
+        </div>
+    </div>
+    
+    <script>
+
+        const $result = document.getElementById('result')
+        const $calculate = document.querySelector('button')
+        const $input = document.getElementById('numbers')
+        
+        $calculate.addEventListener('click', init)
+        
+        function parseInput(input){
+            let array = []
+            let num = '';
+            let value = input.value
+
+            for(let i =0; i <= value.length; i++) {
+                num += value[i]
+
+                if (value[i] == ',' || i == value.length) {
+                    array.push(parseInt(num, 10))
+                    num = ''
+                } 
+            }
+
+            return array
+        }
+
+        function calculate(array) {
+            return array.reduce((prevValue, currValue) => prevValue + currValue) / array.length
+        }
+
+        function printResult(result) {
+            $result.innerHTML = `<hr><p>El resultado es: ${result}</p><hr>`
+        }
+
+        function init() {
+            // debugger
+            let arr = parseInput($input)
+            let result = calculate(arr)
+            printResult(result)
+           
+        }
+
+        
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>
