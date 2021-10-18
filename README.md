@@ -7,3 +7,4 @@ Como bien se menciona, la idea de este ejercicio es que dados una serie de núme
 
 donde m es la media.
 
+Puedes ver el resultado del trabajo [aquí]
